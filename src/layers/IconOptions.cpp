@@ -290,56 +290,11 @@ class IconOptionsPopup : public Popup<> {
         menu->addChild(this->createButton("Solid Wave Trail", "asakiyuki:solid-wave-trail", 0.35f));
         menu->addChild(this->createInfoButton("Solid Wave Trail", "No blending on the wave trail"));
         
-        menu->addChild(this->createButton("No Player Particle", "asakiyuki:no-player-particle", 0.30f));
-        menu->addChild(this->createSelectOptionsButton("No Player Particle", "Disable Particle Effect", "asakiyuki:no-player-particle", 
-        {
-            "Trailing",
-            "Ship Click",
-            "UFO Click",
-            "Robot Burst",
-            "Swing Burst 1",
-            "Swing Burst 2",
-            "Special"
-        },
-        {
-            "Disable Trail Particles",
-            "Disable Ship Click Particles",
-            "Disable UFO Click Particles",
-            "Disable Robot Burst Particles",
-            "Disable Swing Burst Particles 1",
-            "Disable Swing Burst Particles 2",
-            "Disable Other Particles"
-        }));
-        
-        menu->addChild(this->createButton("No Player Effect", "asakiyuki:no-player-effect", 0.30f));
-        menu->addChild(this->createSelectOptionsButton("No Player Effect", "Disable Special Effect", "asakiyuki:no-player-effect", 
-        {
-            "Portal Circle",
-            "Spider Teleport",
-            "Respawn Blink",
-            "Flash Player",
-            "Death Effect",
-            "Bump Effect"
-        },
-        {
-            "Disable circle effect when player enter portal",
-            "Disable spider teleport effect",
-            "Disable respawn flash effect",
-            "Disable flash player effect when player Dashing or Spider Teleport",
-            "No visual death effects",
-            "Disable circle effect when player touched jumpad"
-        }));
-        
-        menu->addChild(this->createButton("No Player Fire", "asakiyuki:no-player-fire", 0.35f));
-        menu->addChild(this->createSelectOptionsButton("No Player Fire", "Hide Player Fires", "asakiyuki:no-player-fire", 
-        {
-            "Robot Fire",
-            "Swing Fire"
-        },
-        {
-            "Hide Robot Fire",
-            "Hide Swing Fire"
-        }));
+        menu->addChild(this->createButton("No Respawn Blink", "asakiyuki:no-respawn-blink", 0.35f));
+        menu->addChild(this->createInfoButton("No Respawn Blink", "Disable respawn flash effect"));
+
+        menu->addChild(this->createButton("No Death Effect", "asakiyuki:no-death-effect", 0.35f));
+        menu->addChild(this->createInfoButton("No Death Effect", "Disable death effect"));
 
         menu->setLayout(RowLayout::create()->setGap(8.f)->setAxisAlignment(AxisAlignment::Start)->setGrowCrossAxis(true));
         this->m_mainLayer->addChild(bg);
